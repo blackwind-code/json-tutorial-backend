@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"log"
 	"math/rand"
 	"net/http"
 	"sync"
@@ -30,6 +31,8 @@ var timeout = time.Minute
 var DB sync.Map
 
 func handler(w http.ResponseWriter, req *http.Request) {
+	log.Printf("%v from %v\n", req.Method, req.RemoteAddr)
+
 	switch req.Method {
 	case "GET":
 		q := Question{
@@ -71,5 +74,8 @@ func handler(w http.ResponseWriter, req *http.Request) {
 
 func main() {
 	http.HandleFunc("/tutorial", handler)
-	http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		log.Fatalln(err)
+	}
 }

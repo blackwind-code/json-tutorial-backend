@@ -31,7 +31,7 @@ b: 939984059
 ```json
 {
     "uuid":"74055de4-a889-4160-95b6-b1f840c2d523",
-    "sum": 1293374082
+    "sum": 1293374082,
 }
 ```
 
@@ -42,7 +42,7 @@ b: 939984059
 ```json 
 {
     "ok": true,
-    "error": "error-message"
+    "error": "error-message",
 }
 ```
 
@@ -51,7 +51,7 @@ b: 939984059
 ```json 
 {
     "ok": true,
-    "error": ""
+    "error": "",
 }
 ```
 
@@ -60,6 +60,6 @@ b: 939984059
 ```json 
 {
     "ok": false,
-    "error": "wrong answer"
+    "error": "wrong answer",
 }
 ```

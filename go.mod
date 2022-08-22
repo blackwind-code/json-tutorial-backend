@@ -1,4 +1,4 @@
-module tutorial
+module github.com/blackwind-code/json-tutorial-backend
 
 go 1.19
 
